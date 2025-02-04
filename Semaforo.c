@@ -2,9 +2,9 @@
 #include "pico/stdlib.h"
 #include "hardware/timer.h"
 
-#define red_pin 11
+#define red_pin 13
 #define blue_pin 12
-#define green_pin 13
+#define green_pin 11
 
 uint8_t contador = 0;
 
