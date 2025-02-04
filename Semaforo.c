@@ -3,7 +3,7 @@
 #include "hardware/timer.h"
 
 #define red_pin 11
-#define yellow_pin 12
+#define blue_pin 12
 #define green_pin 13
 
 uint8_t contador = 0;
@@ -12,27 +12,27 @@ uint8_t contador = 0;
 void inicializar_pinos(){
     gpio_init(red_pin);
     gpio_set_dir(red_pin, GPIO_OUT);
-    gpio_init(yellow_pin);
-    gpio_set_dir(yellow_pin, GPIO_OUT);
+    gpio_init(blue_pin);
+    gpio_set_dir(blue_pin, GPIO_OUT);
     gpio_init(green_pin);
     gpio_set_dir(green_pin, GPIO_OUT);
 }
 
 void ligar_vermelho(){
     gpio_put(red_pin, 1);
-    gpio_put(yellow_pin, 0);
+    gpio_put(blue_pin, 0);
     gpio_put(green_pin, 0);
 }
 
 void ligar_amarelo(){
-    gpio_put(red_pin, 0);
-    gpio_put(yellow_pin, 1);
-    gpio_put(green_pin, 0);
+    gpio_put(red_pin, 1);
+    gpio_put(blue_pin, 0);
+    gpio_put(green_pin, 1);
 }
 
 void ligar_verde(){
     gpio_put(red_pin, 0);
-    gpio_put(yellow_pin, 0);
+    gpio_put(blue_pin, 0);
     gpio_put(green_pin, 1);
 }
 
